@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createContext } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import app from '../../firebse/firebase.config';
 import { useState } from 'react';
+import { current } from 'daisyui/src/colors';
 
 export const AuthContext = createContext()
 const auth = getAuth(app)
@@ -24,6 +25,16 @@ const AuthProvider = ({ children }) => {
     const googleLogin = () => {
         return signInWithPopup(auth, googleProvider)
     }
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log(currentUser)
+            setUser(currentUser)
+        })
+        return () => {
+            return unsubscribe();
+        }
+    })
 
     const authInfo = {
         user,

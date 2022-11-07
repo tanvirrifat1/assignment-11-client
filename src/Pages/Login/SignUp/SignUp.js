@@ -22,8 +22,8 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                toast.success('SignUp successFully', { autoClose: 1000 })
                 form.reset()
-                toast.info('SignUp successFully', { autoClose: 1000 })
 
             })
             .catch(err => console.error(err))
@@ -72,7 +72,7 @@ const SignUp = () => {
                     </form>
                     <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
 
-                    <button onClick={handleGoogleSignIn} className="btn btn-warning m-5"><FaGoogle className='mr-2 text-2xl'></FaGoogle> Google</button>
+                    <button onClick={handleGoogleSignIn} className="btn btn-warning m-5"><FaGoogle className='mr-2 text-3xl'></FaGoogle> Google</button>
                 </div>
             </div>
         </div>

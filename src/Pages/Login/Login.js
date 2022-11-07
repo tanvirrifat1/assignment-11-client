@@ -18,9 +18,9 @@ const Login = () => {
         userLogin(email, password)
             .then(result => {
                 const user = result.user;
-                form.reset()
                 console.log(user)
                 toast.success('Login successFully', { autoClose: 1000 })
+                form.reset()
             })
             .catch(err => {
                 console.error(err)

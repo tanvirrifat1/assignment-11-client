@@ -1,39 +1,35 @@
 [
     {
-        "_id":"0987654321",
         "name": "Lemon",
         "description": "According to a 2012 studyTrusted Source, the flavonoids in citrus fruits may help lower the risk of ischemic stroke in women.A study of data from nearly 70,000 women over 14 years showed that those who ate the most citrus fruits had a 19% lower risk of ischemic stroke than women who consumed the least.Ischemic stroke is the most common type of stroke. It can happen when a blood clot blocks the flow of blood to the brain.A 2019 population studyTrusted Source showed that long term, regular consumption of foods that contain flavonoids might help protect against cancer and cardiovascular disease. However, the study indicated that people who smoked or consumed a lot of alcohol were less likely to benefit.Potassium may help lower the risk of stroke. Which foods contain potassium?",
-        "img": "https://www.freeiconspng.com/uploads/lemon-png-29.png"
+        "img": "https://images.unsplash.com/photo-1469053713174-e64e64779a7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
        
     },
     {
-        "_id":"0987654322",
         "name": "Tomato",
         "description":"Tomato (Solanum lycopersicum L.) belongs to the Solanaceae family and is the second most important fruit or vegetable crop next to potato (Solanum tuberosum L.). It is cultivated for fresh fruit and processed products. Tomatoes contain many health-promoting compounds including vitamins, carotenoids, and phenolic compounds. In addition to its economic and nutritional importance, tomatoes have become the model for the study of fleshy fruit development. Tomato is a climacteric fruit and dramatic metabolic changes occur during its fruit development. In this review, we provide an overview of our current understanding of tomato fruit metabolism. We begin by detailing the genetic and hormonal control of fruit development and ripening, after which we document the primary metabolism of tomato fruits",
-        "img":"https://www.foodunfolded.com/images/uploads/article-images/what-does-organic-mean-in-article-5_1.jpg"
+        "img":"https://images.unsplash.com/photo-1464454709131-ffd692591ee5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
     },
     {
-        "_id":"0987654323",
         "name": "Apple",
         "description":"Apples are rich in quercetin and pectin, both of which are credited for supplying apples with their health benefits. [1] Quercetin is a flavonoid, a type of naturally occurring plant chemical that has antioxidant and anti-inflammatory effects. Pectin is a type of soluble fiber that may help prevent constipation and have a modest effect on lowering LDL, the “bad” cholesterol. Pectin is also fermented by beneficial bacteria in the colon, which produces short chain fatty acids that may play a role in the prevention of chronic diseases, including certain cancers and bowel disorders. [2,3]",
-        "img":"https://www.telegraph.co.uk/multimedia/archive/02327/apples_2327493b.jpg"
+        "img":"https://images.unsplash.com/photo-1464652149449-f3b8538144aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {
-        "_id":"0987654324",
         "name": "Watermelon",
         "description":"Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals, and antioxidants.Along with cantaloupe, honeydew, and cucumber, watermelons are a member of the Cucurbitaceae family.There are five common types of watermelon: seeded, seedless, mini, yellow, and orange.In this article, learn more about the possible health benefits and nutritional content of watermelon, some tips for serving it, and who should limit it.",
-        "img":"https://www.conserve-energy-future.com/wp-content/uploads/2016/11/watermelon-summer-organic-food.jpg"
+        "img":"https://media.istockphoto.com/id/1371344694/photo/siblings-eating-watermelon.jpg?b=1&s=170667a&w=0&k=20&c=m_HLOcww8pnspJ_PNGf4OhpNaafZQOlWxz9GTJTF_ks="
     },
     {
-        "_id":"0987654325",
+
         "name": "Beans",
         "description":"Beans are the seeds from flowering plants in the Fabaceae family and are classified as legumes.Several beans grow in pods or capsules that develop from flowers. Other legumes include peas, peanuts, and lentils. These beans are available dry, canned, or frozen.They differ nutritionally from green beans or wax beans where a person eats the entire pod.Beans contain amino acids, which are the protein building blocks that the body uses to heal and to make new tissues, such as bone, muscle, hair, skin, and blood. Protein is an essential nutrient.There are many types of beans. Dried beans need cooking to make them tender enough to eat. Canned and frozen beans are typically ready to eat after warming on the stove or in the microwave. Some of the most popular bean varieties include:",
-        "img":"https://kalamtimes.com/uploads/images/news/20221018/1666092792_i.jpg"
+        "img":"https://media.istockphoto.com/id/182051238/photo/green-beans.jpg?b=1&s=170667a&w=0&k=20&c=u6oAJ5gAHFPptkeVbuhK22yGoSI0K5TLK3J-CxJ9Ijs="
     },
     {
-        "_id":"0987654326",
+       
         "name": "Banana",
         "description":"Bananas contain water and fiber, both of which promote regularity and encourage digestive health. One medium banana provides approximately 10% of a person’s fiber needs for a day.Bananas are also part of an approach known as the BRAT dietTrusted Source, which some doctors recommend for treating diarrhea. BRAT stands for bananas, rice, applesauce, and toast.Diarrhea can lead to a loss of water and electrolytes, such as potassium. Bananas can replace these nutrients.High fiber foods can trigger bloating, gas, and stomach cramps in people with inflammatory bowel disease (IBD), according to a 2012 studyTrusted Source. However, bananas may improve symptoms, the authors concluded.The Crohn’s and Colitis Foundation of America recommend banana as a snack food in their diet plan",
-        "img":"https://img.freepik.com/premium-photo/banana-isolated-white-whole-sliced-fruit_88281-4220.jpg?w=2000"
+        "img":"https://images.unsplash.com/photo-1611864581049-aca018410b97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1088&q=80"
     }
 ]
