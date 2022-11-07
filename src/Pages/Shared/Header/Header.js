@@ -29,7 +29,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     <Link to='/login'>
-                        <button className="btn btn-error">Login</button>
+                        <button className="btn btn-error hover:rounded-lg">Login</button>
                     </Link>
                 </div>
             </div>

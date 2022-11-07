@@ -5,7 +5,7 @@ import img1 from '../../assets/login/mobile-login-concept-illustration_114360-83
 const Login = () => {
     return (
         <div className="hero w-full my-20">
-            <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
+            <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                     <img className='w-3/4' src={img1} alt="" />
                 </div>
