@@ -1,8 +1,33 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import img1 from '../../assets/login/mobile-login-concept-illustration_114360-83.webp'
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const { userLogin } = useContext(AuthContext)
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        userLogin(email, password)
+            .then(result => {
+                const user = result.user;
+                form.reset()
+                console.log(user)
+                toast.success('Login successFully', { autoClose: 1000 })
+            })
+            .catch(err => {
+                console.error(err)
+                toast.error('password wrong', { autoClose: 1000 })
+            })
+    }
+
     return (
         <div className="hero w-full my-20">
             <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row">
@@ -11,7 +36,7 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
                     <h1 className="text-5xl text-center font-bold">Login</h1>
-                    <form className="card-body">
+                    <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -31,7 +56,7 @@ const Login = () => {
                             <input className="btn btn-outline btn-success rounded-lg" type="submit" value="Login" />
                         </div>
                     </form>
-                    <p className='text-center'>New to Genius Car <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
+                    <p className='text-center'>Food Service Here <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                 </div>
             </div>
         </div>

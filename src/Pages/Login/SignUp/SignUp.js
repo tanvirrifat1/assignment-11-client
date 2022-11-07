@@ -2,17 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import img2 from '../../../assets/login/sign-concept-illustration_114360-125.webp'
 import { FaGoogle } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import { toast } from 'react-toastify';
 
 
 
 const SignUp = () => {
+
+    const { createUser, googleLogin } = useContext(AuthContext)
 
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset()
+                toast.info('SignUp successFully', { autoClose: 1000 })
+
+            })
+            .catch(err => console.error(err))
+    }
+
+    const handleGoogleSignIn = event => {
+        googleLogin()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(err => console.error(err));
     }
 
     return (
@@ -49,7 +72,7 @@ const SignUp = () => {
                     </form>
                     <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
 
-                    <button onClick className="btn btn-warning m-5"><FaGoogle className='mr-2 text-2xl'></FaGoogle> Google</button>
+                    <button onClick={handleGoogleSignIn} className="btn btn-warning m-5"><FaGoogle className='mr-2 text-2xl'></FaGoogle> Google</button>
                 </div>
             </div>
         </div>
