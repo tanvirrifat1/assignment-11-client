@@ -5,10 +5,11 @@ const Header = () => {
 
     const menuItems = <>
         <li> <Link to='/'>Home</Link></li>
+        <li> <Link to='/login'>Login</Link></li>
     </>
 
     return (
-        <div>
+        <div className='m-6'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -27,7 +28,9 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    <Link to='/login'>
+                        <button className="btn btn-error">Login</button>
+                    </Link>
                 </div>
             </div>
         </div>
