@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 
 const FoodCard = ({ food }) => {
     const { _id, img, name, price } = food;
@@ -16,7 +17,9 @@ const FoodCard = ({ food }) => {
                     <h2 className="card-title">{name}</h2>
                     <p className='card-title'>${price}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">See All</button>
+                        <Link to='/getfood'>
+                            <button className="btn btn-outline btn-warning rounded-lg">See All</button>
+                        </Link>
                     </div>
                 </div>
             </div>
