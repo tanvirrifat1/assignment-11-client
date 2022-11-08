@@ -5,7 +5,9 @@ import SingleFood from "../../Pages/Home/Foods/SignleFood/SingleFood";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/Login/SignUp/SignUp";
+import AddFood from "../../Pages/Shared/AddFood/AddFood";
 import Blog from "../../Pages/Shared/Blog/Blog";
+import MyReview from "../../Pages/Shared/MyReview/MyReview";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +38,15 @@ const router = createBrowserRouter([
                 path: '/singlefood/:id',
                 element: <SingleFood></SingleFood>,
                 loader: ({ params }) => fetch(`http://localhost:5000/getfood/${params.id}`)
-            }
+            },
+            {
+                path: '/myreview',
+                element: <MyReview></MyReview>
+            },
+            {
+                path: '/addfood',
+                element: <AddFood></AddFood>
+            },
         ]
     },
 ])

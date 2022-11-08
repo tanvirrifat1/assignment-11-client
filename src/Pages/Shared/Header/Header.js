@@ -21,8 +21,8 @@ const Header = () => {
         <li className='font-bold'> <Link to='/blog'>Blog</Link></li>
 
         <li><h1 className='text-2xl text-purple-700'> {user?.email && <div className='mb-8'>
-            <button className="btn btn-outline btn-success rounded-lg sm:mr-10">Add Product</button>
-            <button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 ">My Review</button>
+            <Link to='/myreview'><button className="btn btn-outline btn-success rounded-lg sm:mr-10">Add Food</button></Link>
+            <Link to='addfood'><button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 ">My Review</button></Link>
         </div>}</h1></li>
     </>
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../../../Hooks/usetitle';
+import ReviewItem from './Reviewitem/ReviewItem';
 
 const SingleFood = () => {
     useTitle('SingleFood')
-    const { img, name, price, description } = useLoaderData()
+    const { img, name, price, description, _id } = useLoaderData()
     return (
         <div className='flex justify-center'>
             <div className="card card-compact  shadow-xl">
@@ -14,6 +15,7 @@ const SingleFood = () => {
                     <p className='text-3xl text-center'>${price}</p>
                     <p>{description}</p>
                 </div>
+                <ReviewItem></ReviewItem>
             </div>
         </div>
     );
