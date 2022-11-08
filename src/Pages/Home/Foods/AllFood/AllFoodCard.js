@@ -20,7 +20,7 @@ const AllfoodCard = ({ allFd }) => {
                         }
                     </p>
                     <div className="card-actions justify-end">
-                        <Link to='/getfood'>
+                        <Link to={`/singlefood/${_id}`}>
                             <button className="btn btn-outline btn-warning rounded-lg">View Details</button>
                         </Link>
                     </div>
