@@ -1,10 +1,48 @@
+import { data } from 'autoprefixer';
 import React from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 
 const ReviewItem = () => {
+    const { _id, price, description, img } = useLoaderData()
     const { user } = useContext(AuthContext)
+
+    const handleReview = event => {
+        event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const email = user?.email || 'unregistered';
+        const img = user?.photoURL || 'unregistered';
+        const message = form.message.value
+
+        const review = {
+            customer: name,
+            email,
+            img,
+            message
+        }
+
+        fetch(`http://localhost:5000/review`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Review successfully', { autoClose: 1000 })
+                    form.reset()
+                }
+            })
+            .catch(err => console.error(err))
+
+    }
+
     return (
         <div className='flex justify-center'>
             <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-900 dark:text-gray-100">
@@ -38,10 +76,19 @@ const ReviewItem = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-full">
-                    <textarea rows="3" placeholder="Message..." className="p-4 rounded-md resize-none dark:text-gray-100 dark:bg-gray-900"></textarea>
-                    <Link className='mt-8' to='/myreview'><button className="btn btn-outline btn-warning rounded-lg">User Feedback</button></Link>
-                </div>
+                <form onSubmit={handleReview}>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                        <input name='name' type="text" placeholder="First name" className="input input-bordered text-black w-full" />
+                        <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input text-black input-bordered w-full" readOnly />
+                    </div>
+                    <div>
+                        <textarea rows="3" name='message' placeholder="Message..." className="p-4 rounded-md text-black resize-none mt-5 "></textarea>
+                        <br />
+                        <input className='btn btn-warning' type="submit" value="Place Your Review" />
+                    </div>
+                </form>
+
+                {/* <Link className='mt-8' to='/myreview'><button className="btn btn-outline btn-warning rounded-lg">User Feedback</button></Link> */}
             </div>
 
         </div>
