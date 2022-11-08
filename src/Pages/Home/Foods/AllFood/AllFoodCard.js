@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../../Hooks/usetitle';
 
 const AllfoodCard = ({ allFd }) => {
+    useTitle('AllFood')
     const { _id, img, name, price, description } = allFd
     return (
         <div>

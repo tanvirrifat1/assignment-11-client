@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import img1 from '../../assets/login/mobile-login-concept-illustration_114360-83.webp'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/usetitle';
 
 const Login = () => {
-
     const { userLogin } = useContext(AuthContext)
-
+    useTitle('login')
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;

@@ -5,11 +5,12 @@ import { FaGoogle } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
+import useTitle from '../../../Hooks/usetitle';
 
 
 
 const SignUp = () => {
-
+    useTitle('signUp')
     const { createUser, googleLogin } = useContext(AuthContext)
 
     const handleSignUp = event => {

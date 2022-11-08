@@ -2,12 +2,13 @@ import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
+import './FoodCard.css'
 
 const FoodCard = ({ food }) => {
     const { _id, img, name, price } = food;
     return (
         <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-96 bg-base-100 card-details shadow-xl">
                 <PhotoProvider>
                     <PhotoView src={img}>
                         <figure><img src={img} alt="Shoes" /></figure>

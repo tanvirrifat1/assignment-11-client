@@ -3,9 +3,10 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import useTitle from '../../../Hooks/usetitle';
 
 const Header = () => {
-
+    useTitle('Home')
     const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
@@ -18,6 +19,11 @@ const Header = () => {
     const menuItems = <>
         <li className='font-bold'> <Link to='/'>Home</Link></li>
         <li className='font-bold'> <Link to='/blog'>Blog</Link></li>
+
+        <li><h1 className='text-2xl text-purple-700'> {user?.email && <div className='mb-8'>
+            <button className="btn btn-outline btn-success rounded-lg sm:mr-10">Add Product</button>
+            <button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 ">My Review</button>
+        </div>}</h1></li>
     </>
 
     return (
@@ -32,20 +38,25 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-3xl text-purple-700">Food-Service</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-3xl text-purple-700">Fast-Food</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
                     </ul>
                 </div>
+                {/* <div className="navbar-end hidden lg:flex">
+                    <ul className="menu menu-horizontal p-0">
+                        {menuItems}
+                    </ul>
+                </div> */}
                 {/* <div className="navbar-end">
                     <Link to='/login'>
                         <button className="btn btn-error hover:rounded-lg">Login</button>
                     </Link>
                 </div> */}
                 <div className='ml-0 navbar-end'>
-                    <h1 className='text-2xl text-purple-700'> {user?.email && <span>Welcome: {user.email}</span>}</h1>
+
                     {
                         user?.email ?
                             <button onClick={handleLogOut} className="btn btn-error hover:rounded-lg">logOut</button>
