@@ -27,7 +27,7 @@ const Header = () => {
     </>
 
     return (
-        <div className='m-6'>
+        <div className='m-2'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -40,6 +40,28 @@ const MyReview = () => {
         }
     }
 
+    const handleUpdate = id => {
+        fetch(`http://localhost:5000/review/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'update' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    const remaining = reviews.filter(odr => odr._id !== id)
+                    const approving = reviews.find(odr => odr._id === id);
+                    approving.status = 'updated'
+
+                    const newReview = [approving, ...remaining];
+                    setReviews(newReview)
+                }
+            })
+    }
+
     return (
         <div>
             {
@@ -56,6 +78,7 @@ const MyReview = () => {
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}
+                                handleUpdate={handleUpdate}
                             ></MyReviewRow>)
                         }
                     </tbody>

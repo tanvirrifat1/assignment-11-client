@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { json } from 'react-router-dom';
 
-const MyReviewRow = ({ review, handleDelete }) => {
-    const { _id, customer, service, email, img, message } = review;
+const MyReviewRow = ({ review, handleDelete, handleUpdate }) => {
+    const { _id, customer, service, email, img, message, status } = review;
     const [reviewService, setReviewService] = useState([])
 
     useEffect(() => {
@@ -48,8 +49,8 @@ const MyReviewRow = ({ review, handleDelete }) => {
                         <div className="modal">
                             <div className="modal-box relative">
                                 <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                <h3 className="text-lg font-bold text-red-600">{status ? status : 'pending'}</h3>
+                                <button onClick={() => handleUpdate(_id)} className='btn'>button</button>
                             </div>
                         </div>
                     </div>

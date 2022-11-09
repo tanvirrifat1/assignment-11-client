@@ -8,7 +8,7 @@ import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 const ReviewItem = () => {
     const { _id, price, description, img } = useLoaderData()
     const { user } = useContext(AuthContext)
-
+    console.log(user)
     const handleReview = event => {
         event.preventDefault()
         const form = event.target;
@@ -53,10 +53,10 @@ const ReviewItem = () => {
                                 <div>
                                     {user?.photoURL ?
                                         <img className=' w-12 h-12 rounded-full dark:bg-gray-500'
-                                            style={{ height: '30px' }} roundedCircle
                                             src={user?.photoURL}></img>
                                         : <></>
                                     }
+
                                 </div>
                                 <div>
                                     {
