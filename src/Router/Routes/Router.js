@@ -8,6 +8,7 @@ import SignUp from "../../Pages/Login/SignUp/SignUp";
 import AddFood from "../../Pages/Shared/AddFood/AddFood";
 import Blog from "../../Pages/Shared/Blog/Blog";
 import MyReview from "../../Pages/Shared/MyReview/MyReview";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/singlefood/:id',
-                element: <SingleFood></SingleFood>,
+                element: <PrivateRoute><SingleFood></SingleFood></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/getfood/${params.id}`)
             },
             {

@@ -13,6 +13,7 @@ const SignUp = () => {
     useTitle('signUp')
     const { createUser, googleLogin } = useContext(AuthContext)
 
+
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;

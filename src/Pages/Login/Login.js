@@ -1,14 +1,20 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import img1 from '../../assets/login/mobile-login-concept-illustration_114360-83.webp'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/usetitle';
 
 const Login = () => {
+
     const { userLogin } = useContext(AuthContext)
     useTitle('login')
+    const location = useLocation()
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/'
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +26,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('Login successFully', { autoClose: 1000 })
+                navigate(from, { replace: true })
                 form.reset()
             })
             .catch(err => {
