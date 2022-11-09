@@ -1,35 +1,21 @@
-import { data } from 'autoprefixer';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const MyReviewRow = ({ review }) => {
-    const { _id, customer, service, email, message, img } = review;
+const MyReviewRow = ({ review, handleDelete }) => {
+    const { _id, customer, service, email, img, message } = review;
     const [reviewService, setReviewService] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getfood/${service}`)
+        fetch(`http://localhost:5000/review/${service}`)
             .then(res => res.json())
             .then(data => setReviewService(data))
     }, [service])
 
-    const handleDelete = id => {
-        const proceed = window.confirm('Are You sure Delete Your Review');
-
-        if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                })
-        }
-    }
 
 
     return (
-        <div className='flex justify-center sm:overflow-x-hidden'>
+        <div className='flex justify-center'>
             <tr>
                 <th>
                     <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline">
@@ -42,6 +28,11 @@ const MyReviewRow = ({ review }) => {
                             <div className="mask mask-squircle w-12 h-12">
                                 <img src={img} alt="Avatar Tailwind CSS Component" />
                             </div>
+                            {/* <div className="mask mask-squircle w-12 h-12">
+                                {
+                                    reviewService?.img &&
+                                    <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />}
+                            </div> */}
                         </div>
                         <div>
                             <div className="font-bold">{customer}</div>
@@ -49,13 +40,19 @@ const MyReviewRow = ({ review }) => {
                         </div>
                     </div>
                 </td>
-                <td>
-                    {service}
-                    <br />
 
-                </td>
                 <th>
-                    <button className="btn btn-ghost btn-xs text-xl">Edit</button>
+                    <div>
+                        <label htmlFor="my-modal-3" className="btn">Edit</label>
+                        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+                        <div className="modal">
+                            <div className="modal-box relative">
+                                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
+                                <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                            </div>
+                        </div>
+                    </div>
                 </th>
             </tr>
         </div>

@@ -78,7 +78,7 @@ const ReviewItem = () => {
                 </div>
                 <form onSubmit={handleReview}>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                        <input name='name' type="text" placeholder="First name" className="input input-bordered text-black w-full" />
+                        <input name='name' type="text" placeholder="Service name" className="input input-bordered text-black w-full" />
                         <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input text-black input-bordered w-full" readOnly />
                     </div>
                     <div>

@@ -18,8 +18,8 @@ const FoodCard = ({ food }) => {
                     <h2 className="card-title">{name}</h2>
                     <p className='card-title'>${price}</p>
                     <div className="card-actions justify-end">
-                        <Link to='/getfood'>
-                            <button className="btn btn-outline btn-warning rounded-lg">See All</button>
+                        <Link to={`/singlefood/${_id}`}>
+                            <button className="btn btn-outline btn-warning rounded-lg">View Details</button>
                         </Link>
                     </div>
                 </div>
