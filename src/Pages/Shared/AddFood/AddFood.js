@@ -4,7 +4,6 @@ import useTitle from '../../../Hooks/usetitle';
 
 const AddFood = () => {
     useTitle('AddFood')
-    // const { img, name, price, description, _id } = useLoaderData()
     const handleForm = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -23,7 +22,7 @@ const AddFood = () => {
 
         }
         console.log(service)
-        fetch(`http://localhost:5000/getfood`, {
+        fetch(`https://assignment-server-11.vercel.app/getfood`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

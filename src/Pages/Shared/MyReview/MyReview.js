@@ -15,7 +15,7 @@ const MyReview = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(`https://assignment-server-11.vercel.app/review?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email]);
@@ -25,7 +25,7 @@ const MyReview = () => {
         const proceed = toast.warning('delete successfully', { autoClose: 1000 });
 
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://assignment-server-11.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -40,7 +40,7 @@ const MyReview = () => {
     }
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/review/${id}`, {
+        fetch(`https://assignment-server-11.vercel.app/review/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

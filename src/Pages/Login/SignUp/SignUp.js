@@ -11,8 +11,14 @@ import useTitle from '../../../Hooks/usetitle';
 
 const SignUp = () => {
     useTitle('signUp')
-    const { createUser, googleLogin } = useContext(AuthContext)
+    const { createUser, googleLogin, loading } = useContext(AuthContext)
 
+
+    if (loading) {
+        return <div className='flex justify-center'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+        </div>
+    }
 
     const handleSignUp = event => {
         event.preventDefault();

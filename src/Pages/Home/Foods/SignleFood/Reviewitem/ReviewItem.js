@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer';
 import React from 'react';
 import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
@@ -24,7 +23,7 @@ const ReviewItem = () => {
             message
         }
 
-        fetch(`http://localhost:5000/review`, {
+        fetch(`https://assignment-server-11.vercel.app/review`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -87,8 +86,6 @@ const ReviewItem = () => {
                         <input className='btn btn-warning' type="submit" value="Place Your Review" />
                     </div>
                 </form>
-
-                {/* <Link className='mt-8' to='/myreview'><button className="btn btn-outline btn-warning rounded-lg">User Feedback</button></Link> */}
             </div>
 
         </div>

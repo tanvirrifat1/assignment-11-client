@@ -4,7 +4,7 @@ import AllfoodCard from '../AllFood/AllFoodCard';
 const AllFood = () => {
     const [allfood, setAllFood] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getfood')
+        fetch('https://assignment-server-11.vercel.app/getfood')
             .then(res => res.json())
             .then(data => setAllFood(data))
     }, [])

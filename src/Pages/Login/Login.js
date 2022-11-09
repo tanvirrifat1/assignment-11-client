@@ -8,12 +8,21 @@ import useTitle from '../../Hooks/usetitle';
 
 const Login = () => {
 
-    const { userLogin } = useContext(AuthContext)
+    const { userLogin, loading } = useContext(AuthContext)
+
+
+
     useTitle('login')
     const location = useLocation()
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/'
+
+    if (loading) {
+        return <div className='flex justify-center'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+        </div>
+    }
 
     const handleLogin = event => {
         event.preventDefault();
