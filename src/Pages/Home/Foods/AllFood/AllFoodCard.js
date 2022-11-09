@@ -15,7 +15,7 @@ const AllfoodCard = ({ allFd }) => {
                     <p className='card-title'>${price}</p>
                     <p>
                         {
-                            description.length > 100 ?
+                            description?.length > 100 ?
                                 <>{description.slice(0, 100) + '.....'}  </>
                                 :
                                 description
