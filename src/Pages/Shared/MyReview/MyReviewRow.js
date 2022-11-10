@@ -8,10 +8,10 @@ const MyReviewRow = ({ review, handleDelete, handleUpdate }) => {
     const [reviewService, setReviewService] = useState([])
 
     useEffect(() => {
-        fetch(`https://assignment-server-11.vercel.app/review/${service}`)
+        fetch(`https://assignment-server-11.vercel.app/review/${review}`)
             .then(res => res.json())
             .then(data => setReviewService(data))
-    }, [service])
+    }, [review])
 
 
 

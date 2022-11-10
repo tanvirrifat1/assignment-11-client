@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import Error from "../../Pages/Home/Error/Error";
 import AllFood from "../../Pages/Home/Foods/AllFood/AllFood";
 import SingleFood from "../../Pages/Home/Foods/SignleFood/SingleFood";
 import Home from "../../Pages/Home/Home/Home";
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
             }
         ]
     },
+    { path: '*', element: <Error></Error> }
 ])
 
 export default router;

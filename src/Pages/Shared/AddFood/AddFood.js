@@ -36,6 +36,7 @@ const AddFood = () => {
                     toast.success("Add New Product Successfully", { autoClose: 200 })
                 }
                 console.log('Success:', data);
+                form.reset();
             })
             .catch((error) => {
                 console.error('Error:', error);

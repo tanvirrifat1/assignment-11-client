@@ -1,0 +1,81 @@
+[debug] [2022-11-10T08:58:38.706Z] ----------------------------------------------------------------------
+[debug] [2022-11-10T08:58:38.708Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-10T08:58:38.709Z] CLI Version:   11.14.4
+[debug] [2022-11-10T08:58:38.709Z] Platform:      win32
+[debug] [2022-11-10T08:58:38.709Z] Node Version:  v16.15.1
+[debug] [2022-11-10T08:58:38.712Z] Time:          Thu Nov 10 2022 14:58:38 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-10T08:58:38.713Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-10T08:58:38.770Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-10T08:58:38.770Z] > authorizing via signed-in user (rifatkhan5567790@gmail.com)
+[debug] [2022-11-10T08:58:38.770Z] [iam] checking project assignment-project-33308 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-10T08:58:38.773Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/assignment-project-33308:testIamPermissions [none]
+[debug] [2022-11-10T08:58:38.773Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/assignment-project-33308:testIamPermissions x-goog-quota-user=projects/assignment-project-33308
+[debug] [2022-11-10T08:58:38.773Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/assignment-project-33308:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-10T08:58:40.515Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/assignment-project-33308:testIamPermissions 200
+[debug] [2022-11-10T08:58:40.516Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/assignment-project-33308:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-10T08:58:40.516Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/assignment-project-33308 [none]
+[debug] [2022-11-10T08:58:41.064Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/assignment-project-33308 200
+[debug] [2022-11-10T08:58:41.064Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/assignment-project-33308 {"projectId":"assignment-project-33308","projectNumber":"683617026839","displayName":"assignment-project","name":"projects/assignment-project-33308","resources":{"hostingSite":"assignment-project-33308"},"state":"ACTIVE","etag":"1_8785e14b-37f0-4dd7-83fa-9615bc0ceab8"}
+[info] 
+[info] === Deploying to 'assignment-project-33308'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-10T08:58:41.068Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions [none]
+[debug] [2022-11-10T08:58:41.068Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-10T08:58:42.519Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions 200
+[debug] [2022-11-10T08:58:42.520Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions {"name":"projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[assignment-project-33308]: beginning deploy... 
+[info] i  hosting[assignment-project-33308]: found 21 files in build 
+[debug] [2022-11-10T08:58:42.548Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-10T08:58:42.845Z] [hosting] hash cache [YnVpbGQ] stored for 21 files
+[debug] [2022-11-10T08:58:42.845Z] [hosting][hash queue][FINAL] {"max":288,"min":3,"avg":22.285714285714285,"active":0,"complete":21,"success":21,"errored":0,"retried":0,"total":21,"elapsed":294}
+[debug] [2022-11-10T08:58:42.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729:populateFiles [none]
+[debug] [2022-11-10T08:58:42.846Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729:populateFiles {"files":{"/favicon.ico":"ca99344174638b4353f19908eafe89bb6458a5ae1e5f8daeb4e16fd777e87d3d","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/service.json":"09e4e48a6cd950d2aeaa937a23945284abbd8c9eb23b9ad12d3d5f85feca9f84","/asset-manifest.json":"b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9","/index.html":"e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7","/static/js/787.ec704a7a.chunk.js":"39c69883d999c8edcd20d1da53e6fc86ad9bd18c8b3625e1b77c192303013e6e","/static/js/787.ec704a7a.chunk.js.map":"abc99c25c7f4575b8d5ffcf03650c6922458c58f5f5e9156d8fb69cf2ed58dbc","/static/js/main.30fed809.js.LICENSE.txt":"29fba471d481398619ffd50250e8431add61c7c8208f77fc9b05cd1bf9708876","/static/media/2.53e2030d6b1474001fb1.jpg":"0771f319b8074bbb70a685330cae103763db9c91d7918a7b7235ed13ed7a27be","/static/media/mobile-login-concept-illustration_114360-83.7f8b0a3a8a183c2aad81.webp":"84c335f956ab32fd3b636e16b3aa7f98b3860ee30c2e658983daed921a52db58","/static/css/main.8ccf8046.css":"a4789f6cff10b49ed57b1d7bf9b6561d51608fda8f8b3ff0a8166411c8a98431","/static/media/sign-concept-illustration_114360-125.69b9b18638cd1b93ffd5.webp":"8e8d4fad9ee9e72944bc93c072a51c6dcf0b05dc02d4c7021fc3dd46290f4a97","/static/css/main.8ccf8046.css.map":"e585f0afaaeb5073cf8a36ba6aea3e5d790e7acdf18a0c357c0d73be3004ebf3","/static/media/3.8589730d788a86c05721.jpg":"31b7805ca75a4c2b4948d4005ef94a24f9c61f8299344ef21ea89acdfd327d0e","/static/media/1.c1bc5da1a4baa691b092.jpg":"e903bcdbd73fe8f6a8aac2b54c39b6d8c072c3a1eb640f7ef8b0bef43f8791fb","/static/media/4.6f97df900ff80d38c15e.jpg":"d57520360e054a8acc25d68a0c2885fcf11ce97dc525460f762e6dd58dc92b1a","/static/js/main.30fed809.js":"de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180","/static/js/main.30fed809.js.map":"37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a"}}
+[debug] [2022-11-10T08:58:44.098Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729:populateFiles 200
+[debug] [2022-11-10T08:58:44.099Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729:populateFiles {"uploadRequiredHashes":["de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180","b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9","37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a","e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files"}
+[debug] [2022-11-10T08:58:44.102Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180 [none]
+[debug] [2022-11-10T08:58:44.103Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180 [stream]
+[debug] [2022-11-10T08:58:44.104Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9 [none]
+[debug] [2022-11-10T08:58:44.104Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9 [stream]
+[debug] [2022-11-10T08:58:44.105Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a [none]
+[debug] [2022-11-10T08:58:44.105Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a [stream]
+[debug] [2022-11-10T08:58:44.105Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7 [none]
+[debug] [2022-11-10T08:58:44.105Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7 [stream]
+[debug] [2022-11-10T08:58:44.106Z] [hosting][populate queue][FINAL] {"max":1258,"min":1258,"avg":1258,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1262}
+[debug] [2022-11-10T08:58:44.106Z] [hosting] uploads queued: 4
+[debug] [2022-11-10T08:58:45.744Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9 200
+[debug] [2022-11-10T08:58:45.744Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/b2f63d14fd610f58c776f2dab3f03dc7a6d2e92b74ed052e4ae7977117fc68f9 [stream]
+[debug] [2022-11-10T08:58:46.006Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180 200
+[debug] [2022-11-10T08:58:46.006Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/de0bccbed75fe9f02ff751502c471e48b913a0374e5a5683b7cff40965c55180 [stream]
+[debug] [2022-11-10T08:58:47.822Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7 200
+[debug] [2022-11-10T08:58:47.822Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/e14885dc3ff1fe5da254118fe598de8d0ea7453ead5de6cd837903dc8347b9b7 [stream]
+[debug] [2022-11-10T08:58:49.787Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a 200
+[debug] [2022-11-10T08:58:49.788Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/assignment-project-33308/versions/db4bda56289cb729/files/37367dc0ace7daff8c74e1b4e7973c73628ae7c75e03472c3f2690ba8685ba4a [stream]
+[debug] [2022-11-10T08:58:49.788Z] [hosting][upload queue][FINAL] {"max":5687,"min":1643,"avg":3239.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":5689}
+[info] +  hosting[assignment-project-33308]: file upload complete 
+[debug] [2022-11-10T08:58:49.791Z] [hosting] deploy completed after 7265ms
+[debug] [2022-11-10T08:58:49.797Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "assignment-project-33308"
+    },
+    "version": "projects/683617026839/sites/assignment-project-33308/versions/db4bda56289cb729"
+  }
+]
+[info] i  hosting[assignment-project-33308]: finalizing version... 
+[debug] [2022-11-10T08:58:49.801Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions/db4bda56289cb729 updateMask=status%2Cconfig
+[debug] [2022-11-10T08:58:49.801Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/assignment-project-33308/versions/db4bda56289cb729 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

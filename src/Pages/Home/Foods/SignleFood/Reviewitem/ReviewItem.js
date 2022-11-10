@@ -7,7 +7,7 @@ import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 const ReviewItem = () => {
     const { _id, price, description, img } = useLoaderData()
     const { user } = useContext(AuthContext)
-    console.log(user)
+
     const handleReview = event => {
         event.preventDefault()
         const form = event.target;

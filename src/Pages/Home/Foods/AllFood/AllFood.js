@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../../context/AuthProvider/AuthProvider';
 import AllfoodCard from '../AllFood/AllFoodCard';
 
 const AllFood = () => {
+    const { user, loading } = useContext(AuthContext)
     const [allfood, setAllFood] = useState([]);
+
     useEffect(() => {
         fetch('https://assignment-server-11.vercel.app/getfood')
             .then(res => res.json())
             .then(data => setAllFood(data))
+
     }, [])
+
+    if (loading) {
+        return <div className='flex justify-center'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+        </div>
+    }
+
     return (
         <div>
             <h2 className='text-5xl font-semibold text-center mb-4 '>Our Organic Food</h2>
