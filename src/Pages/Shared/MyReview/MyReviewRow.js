@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { json } from 'react-router-dom';
+import { json, Link } from 'react-router-dom';
 
 const MyReviewRow = ({ review, handleDelete, handleUpdate }) => {
     const { _id, customer, service, email, img, message, status } = review;
@@ -29,11 +29,7 @@ const MyReviewRow = ({ review, handleDelete, handleUpdate }) => {
                             <div className="mask mask-squircle w-12 h-12">
                                 <img src={img} alt="Avatar Tailwind CSS Component" />
                             </div>
-                            {/* <div className="mask mask-squircle w-12 h-12">
-                                {
-                                    reviewService?.img &&
-                                    <img src={reviewService.img} alt="Avatar Tailwind CSS Component" />}
-                            </div> */}
+
                         </div>
                         <div>
                             <div className="font-bold">{customer}</div>
@@ -44,16 +40,9 @@ const MyReviewRow = ({ review, handleDelete, handleUpdate }) => {
 
                 <th>
                     <div>
-                        <label htmlFor="my-modal-3" className="btn">Edit</label>
-                        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-                        <div className="modal">
-                            <div className="modal-box relative">
-                                <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                <h3 className="text-lg font-bold text-red-600">{status ? status : 'pending'}</h3>
-                                <button onClick={() => handleUpdate(_id)} className='btn'>button</button>
-                            </div>
-                        </div>
+                        <Link to='/edit'><button className='btn'>EDIT</button></Link>
                     </div>
+
                 </th>
             </tr>
         </div>

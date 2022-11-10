@@ -7,6 +7,7 @@ import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/Login/SignUp/SignUp";
 import AddFood from "../../Pages/Shared/AddFood/AddFood";
 import Blog from "../../Pages/Shared/Blog/Blog";
+import Edit from "../../Pages/Shared/MyReview/Edit/Edit";
 import MyReview from "../../Pages/Shared/MyReview/MyReview";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
                 path: '/addfood',
                 element: <PrivateRoute><AddFood></AddFood></PrivateRoute>
             },
+            {
+                path: '/edit',
+                element: <Edit></Edit>
+            }
         ]
     },
 ])
