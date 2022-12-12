@@ -23,7 +23,8 @@ const Header = () => {
         <li><h1 className='text-2xl text-purple-700'> {user?.email && <div className='mb-8'>
             <Link to='/addfood'><button className="btn btn-outline btn-success rounded-lg sm:mr-10">Add Food</button></Link>
             <Link to='/myreview'><button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 ">My Review</button></Link>
-        </div>}</h1></li>
+        </div>}</h1>
+        </li>
     </>
 
     return (
@@ -57,6 +58,14 @@ const Header = () => {
                 </div> */}
                 <div className='ml-0 navbar-end'>
 
+                    <div className='mr-4'>
+                        {user?.photoURL ?
+                            <img className=' w-12 h-12 rounded-full dark:bg-gray-500'
+                                src={user?.photoURL} alt=""></img>
+                            :
+                            <></>
+                        }
+                    </div>
                     {
                         user?.email ?
                             <button onClick={handleLogOut} className="btn btn-error hover:rounded-lg">logOut</button>
