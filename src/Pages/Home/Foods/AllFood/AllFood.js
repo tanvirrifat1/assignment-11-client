@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../../../context/AuthProvider/AuthProvider';
 import AllfoodCard from '../AllFood/AllFoodCard';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const AllFood = () => {
     const { user, loading } = useContext(AuthContext)
@@ -22,8 +24,18 @@ const AllFood = () => {
 
     return (
         <div>
-            <h2 className='text-5xl font-semibold text-center mb-4 '>Our Organic Food</h2>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-10'>
+            <span className='text-violet-400 text-bold text-xl mt-6'>
+                <Typewriter
+                    words={['Our Organic Food',]}
+                    loop={5}
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={60}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                />
+            </span>
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     allfood?.map(allFd => <AllfoodCard
                         key={allFd._id}

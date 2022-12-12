@@ -4,17 +4,30 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../../context/AuthProvider/AuthProvider';
 import useTitle from '../../../../Hooks/usetitle';
 import ReviewItem from './Reviewitem/ReviewItem';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const SingleFood = () => {
     const { user } = useContext(AuthContext)
     useTitle('SingleFood')
-    const { img, name, price, description, _id } = useLoaderData()
+    const { img, name, price, description, } = useLoaderData()
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center' data-aos="fade-up"
+            data-aos-duration="3000">
             <div className="card card-compact  shadow-xl">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="text-3xl text-center">{name}</h2>
+                    <span className='text-violet-400 text-bold text-4xl mt-6'>
+                        <Typewriter
+                            words={[`${name}`,]}
+                            loop={5}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={60}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
                     <p className='text-3xl text-center'>${price}</p>
                     <p>{description}</p>
                 </div>

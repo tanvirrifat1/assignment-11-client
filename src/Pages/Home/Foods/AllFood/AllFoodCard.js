@@ -7,7 +7,7 @@ const AllfoodCard = ({ allFd }) => {
     const { _id, img, name, price, description } = allFd
     return (
         <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-96  ml-14 shadow-xl" data-aos="zoom-out" data-aos-duration="2000">
                 <figure><img src={img} alt="Shoes" /></figure>
 
                 <div className="card-body">

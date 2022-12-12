@@ -10,7 +10,7 @@ import img6 from '../../../assets/Sliders/noodles.jpg'
 const Future = () => {
     return (
         <div>
-            <section className="my-8 dark:text-gray-100">
+            <section className="my-8 dark:text-gray-100" data-aos="zoom-out" data-aos-duration="2000">
 
                 <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
                     <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
@@ -28,7 +28,7 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img1} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img1} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight"> Chicken Fry</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img2} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img2} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Burger</p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img3} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img3} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Sandwich</p>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img4} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img4} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Chicken roll</p>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img5} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img5} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Orange Juice</p>
                         </div>
                     </div>
@@ -119,9 +119,8 @@ const Future = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={img6} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={img6} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Noodles</p>
-                            <p className="text-sm uppercase">Aliquam illum</p>
                         </div>
                     </div>
                 </div>

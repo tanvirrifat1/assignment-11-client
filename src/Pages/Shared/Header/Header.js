@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import useTitle from '../../../Hooks/usetitle';
+import img from '../../../assets/Sliders/istockphoto-1004591262-612x612.jpg'
 
 const Header = () => {
     useTitle('Home')
@@ -21,8 +22,8 @@ const Header = () => {
         <li className='font-bold'> <Link to='/blog'>Blog</Link></li>
 
         <li><h1 className='text-2xl text-purple-700'> {user?.email && <div className='mb-8'>
-            <Link to='/addfood'><button className="btn btn-outline btn-success rounded-lg sm:mr-10">Add Food</button></Link>
-            <Link to='/myreview'><button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 ">My Review</button></Link>
+            <Link to='/addfood'><button className="btn btn-outline btn-success rounded-lg sm:mr-10 font-bold">Add Food</button></Link>
+            <Link to='/myreview'><button className="btn btn-outline btn-primary rounded-lg sm:mt-8 sm:mr-10 font-bold">My Review</button></Link>
         </div>}</h1>
         </li>
     </>
@@ -39,23 +40,16 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-3xl text-purple-700">Fast-Food</Link>
+                    <div className='flex justify-center'>
+                        <Link to='/' className="btn btn-ghost normal-case text-xl font-bold ">Fast-Food <img className='w-10 h-10 ml-3 rounded-lg' src={img} alt="" /></Link>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
                     </ul>
                 </div>
-                {/* <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal p-0">
-                        {menuItems}
-                    </ul>
-                </div> */}
-                {/* <div className="navbar-end">
-                    <Link to='/login'>
-                        <button className="btn btn-error hover:rounded-lg">Login</button>
-                    </Link>
-                </div> */}
+
                 <div className='ml-0 navbar-end'>
 
                     <div className='mr-4'>
@@ -68,8 +62,8 @@ const Header = () => {
                     </div>
                     {
                         user?.email ?
-                            <button onClick={handleLogOut} className="btn btn-error hover:rounded-lg">logOut</button>
-                            : <Link className='btn btn-error hover:rounded-lg"' to='/login'> LogIn</Link>
+                            <button onClick={handleLogOut} className="btn btn-primary hover:rounded-lg font-bold">logOut</button>
+                            : <Link className='btn btn-primary hover:rounded-lg font-bold' to='/login'> LogIn</Link>
                     }
                 </div>
             </div>

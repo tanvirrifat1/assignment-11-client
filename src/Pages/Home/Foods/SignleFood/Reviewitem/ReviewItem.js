@@ -1,11 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 
 const ReviewItem = () => {
-    const { _id, price, description, img } = useLoaderData()
+
     const { user } = useContext(AuthContext)
 
     const handleReview = event => {
@@ -51,7 +50,7 @@ const ReviewItem = () => {
                             <div className="flex space-x-4">
                                 <div>
                                     {user?.photoURL ?
-                                        <img className=' w-12 h-12 rounded-full dark:bg-gray-500'
+                                        <img className=' w-12 h-12 rounded-full dark:bg-gray-500' alt=''
                                             src={user?.photoURL}></img>
                                         : <></>
                                     }
