@@ -14,30 +14,32 @@ const SingleFood = () => {
     return (
         <div className='flex justify-center' data-aos="fade-up"
             data-aos-duration="3000">
-            <div className="card card-compact  shadow-xl">
-                <figure><img src={img} alt="Shoes" /></figure>
-                <div className="card-body">
-                    <span className='text-violet-400 text-bold text-4xl mt-6'>
-                        <Typewriter
-                            words={[`${name}`,]}
-                            loop={5}
-                            cursor
-                            cursorStyle='_'
-                            typeSpeed={60}
-                            deleteSpeed={50}
-                            delaySpeed={1000}
-                        />
-                    </span>
-                    <p className='text-3xl text-center'>${price}</p>
-                    <p>{description}</p>
-                </div>
-                <div className=' flex justify-center '>
-                    {
-                        user?.email ?
-                            <ReviewItem></ReviewItem>
+            <div className='container mx-auto'>
+                <div className="card card-compact mt-10 shadow-xl">
+                    <figure><img src={img} alt="Shoes" /></figure>
+                    <div className="card-body ">
+                        <span className='text-violet-400 text-center text-bold text-4xl mt-6'>
+                            <Typewriter
+                                words={[`${name}`,]}
+                                loop={5}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={60}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </span>
+                        <p className='text-3xl text-center'>${price}</p>
+                        <p>{description}</p>
+                    </div>
+                    <div className=' flex justify-center '>
+                        {
+                            user?.email ?
+                                <ReviewItem></ReviewItem>
 
-                            : <Link className='btn btn-outline btn-warning rounded-lg' to='/login'>Please LogIn</Link>
-                    }
+                                : <Link className='btn btn-outline btn-warning rounded-lg' to='/login'>Please LogIn</Link>
+                        }
+                    </div>
                 </div>
             </div>
         </div>

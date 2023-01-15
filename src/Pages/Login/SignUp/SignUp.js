@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img2 from '../../../assets/login/sign-concept-illustration_114360-125.webp'
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from 'react';
@@ -13,6 +13,7 @@ const SignUp = () => {
     useTitle('signUp')
     const { createUser, googleLogin, loading } = useContext(AuthContext)
 
+    const navigate = useNavigate()
 
     if (loading) {
         return <div className='flex justify-center'>
@@ -32,7 +33,7 @@ const SignUp = () => {
                 console.log(user)
                 toast.success('SignUp successFully', { autoClose: 1000 })
                 form.reset()
-
+                navigate('/')
             })
             .catch(err => console.error(err))
     }

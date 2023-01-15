@@ -23,8 +23,8 @@ const AllFood = () => {
     }
 
     return (
-        <div>
-            <span className='text-violet-400 text-bold text-xl mt-6'>
+        <div className='text-center py-8 text-3xl'>
+            <span className='text-violet-400 text-center text-bold mb-4 text-3xl'>
                 <Typewriter
                     words={['Our Organic Food',]}
                     loop={5}
@@ -35,13 +35,15 @@ const AllFood = () => {
                     delaySpeed={1000}
                 />
             </span>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                {
-                    allfood?.map(allFd => <AllfoodCard
-                        key={allFd._id}
-                        allFd={allFd}
-                    ></AllfoodCard>)
-                }
+            <div className='container mx-auto'>
+                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                    {
+                        allfood?.map(allFd => <AllfoodCard
+                            key={allFd._id}
+                            allFd={allFd}
+                        ></AllfoodCard>)
+                    }
+                </div>
             </div>
         </div>
     );

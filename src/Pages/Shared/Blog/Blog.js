@@ -7,7 +7,7 @@ const Blog = () => {
     useTitle('Blog')
     return (
         <div className='m-8'>
-            <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
+            <section className="p-6 text-white">
                 <div className="container mx-auto">
                     <h2 className="text-5xl font-bold text-center dark:text-gray-50">Here is Some Questions</h2>
                     <div className="grid gap-6 my-16 lg:grid-cols-3">

@@ -50,7 +50,7 @@ const ReviewItem = () => {
                             <div className="flex space-x-4">
                                 <div>
                                     {user?.photoURL ?
-                                        <img className=' w-12 h-12 rounded-full dark:bg-gray-500' alt=''
+                                        <img className=' w-16 h-16 rounded-full dark:bg-gray-500' alt=''
                                             src={user?.photoURL}></img>
                                         : <></>
                                     }
@@ -60,30 +60,24 @@ const ReviewItem = () => {
                                     {
                                         user?.uid ?
                                             <>
-                                                <span className='m-2'> {user?.displayName}</span>
+                                                <span className='m-2 text-xl'> {user?.displayName}</span>
                                             </>
                                             :
                                             <></>
                                     }
                                 </div>
                             </div>
-
-                        </div>
-                        <div className="p-4 space-y-2 text-sm dark:text-gray-400">
-
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleReview}>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                        <input name='name' type="text" placeholder="Service name" className="input input-bordered text-black w-full" />
-                        <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} className="input text-black input-bordered w-full" readOnly />
+                <form onSubmit={handleReview} className='m-6'>
+                    <div className=' gap-4'>
+                        <input name="firstName" type="text" placeholder="First Name" className=" mt-2 bg-white text-black input input-ghost w-full  input-bordered" />
+                        <input name="lastName" type="text" placeholder="Last Name" className="input  mt-2 bg-white text-black input-ghost w-full  input-bordered" />
+                        <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className=" mt-2 bg-white text-black input input-ghost w-full  input-bordered" readOnly />
                     </div>
-                    <div>
-                        <textarea rows="3" name='message' placeholder="Message..." className="p-4 rounded-md text-black resize-none mt-5 "></textarea>
-                        <br />
-                        <input className='btn btn-warning' type="submit" value="Place Your Review" />
-                    </div>
+                    <textarea name='message' className="textarea text-black mt-2 bg-white  textarea-bordered h-24 w-full" placeholder="Your msg" required></textarea>
+                    <input className='btn  mt-2 bg-white w-full text-black btn-outline btn-info rounded-lg' type="submit" value="Place your order" />
                 </form>
             </div>
 

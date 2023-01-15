@@ -13,7 +13,11 @@ const Future = () => {
             <section className="my-8 dark:text-gray-100" data-aos="zoom-out" data-aos-duration="2000">
 
                 <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -27,12 +31,16 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img1} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight"> Chicken Fry</p>
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -45,12 +53,16 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img2} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Burger</p>
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -63,12 +75,16 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img3} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Sandwich</p>
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -82,12 +98,16 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img4} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Chicken roll</p>
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -100,12 +120,16 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img5} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Orange Juice</p>
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                    <div
+                        style={{
+                            backgroundColor: '#832561',
+                        }}
+                        className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
                         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
                             <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -118,7 +142,7 @@ const Future = () => {
                                 </svg>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-col items-center justify-center p-8 rounded-b-lg ">
                             <img src={img6} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Noodles</p>
                         </div>
