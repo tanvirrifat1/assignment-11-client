@@ -47,19 +47,30 @@ const AddFood = () => {
 
     return (
         <div>
-            <form onSubmit={handleForm} >
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 m-10'>
-                    <input type="text" name='name' placeholder="name" className="input input-bordered input-primary   rounded-lg" />
-                    <input type="text" name='price' placeholder="price" className="input input-bordered input-primary rounded-lg  " />
-                    <input type="text" name='imgUrl' placeholder="img-url" className="input input-bordered input-primary rounded-lg  " />
-                    <input type="text" name='description' placeholder="description" className="input input-bordered input-primary rounded-lg " />
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className='p-6 bg-black text-white rounded-2xl'>
+                            <form onSubmit={handleForm} >
+                                <div className='gap-5'>
+                                    <input type="text" name='name' placeholder="name" className="mt-2 bg-white text-black input input-ghost w-full  input-bordered" />
+                                    <input type="text" name='price' placeholder="price" className="input  mt-2 bg-white text-black input-ghost w-full  input-bordered " />
+                                    <input type="text" name='imgUrl' placeholder="img-url" className=" mt-2 bg-white text-black input input-ghost w-full  input-bordered " />
+                                    <textarea type="text" name='description' placeholder="description" className="textarea text-black mt-2 bg-white  textarea-bordered  w-full" required></textarea>
+                                </div>
+                                <div className='flex justify-center m-4'>
+                                    <button type='submit' className="btn btn-outline w-full btn-warning rounded-lg">Add Foods</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div className='flex justify-center m-4'>
-                    <button type='submit' className="btn btn-outline btn-warning rounded-lg">Add Foods</button>
-                </div>
-            </form>
+            </div >
         </div >
     );
 };
 
 export default AddFood;
+
+
+

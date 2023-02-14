@@ -35,8 +35,8 @@ const AllFood = () => {
                     delaySpeed={1000}
                 />
             </span>
-            <div className='container mx-auto'>
-                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='container mx-auto mt-5'>
+                <div className='grid gap-6 grid-cols-1  md:grid-cols-2 lg:grid-cols-3'>
                     {
                         allfood?.map(allFd => <AllfoodCard
                             key={allFd._id}
