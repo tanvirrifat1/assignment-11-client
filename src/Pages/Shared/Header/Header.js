@@ -56,13 +56,20 @@ const Header = () => {
 
                 <div className='ml-0 navbar-end'>
 
-                    <div className='mr-4'>
+                    <div className='mr-4 flex justify-start'>
                         {user?.photoURL ?
                             <img className=' w-12 h-12 rounded-full dark:bg-gray-500'
                                 src={user?.photoURL} alt=""></img>
                             :
                             <></>
                         }
+                        <div className='ml-2'>
+                            {user?.displayName ?
+                                <p className='py-4 font-semibold text-[18px] text-white mr-2'>Welcome {user?.displayName} </p>
+                                :
+                                <></>
+                            }
+                        </div>
                     </div>
                     {
                         user?.email ?

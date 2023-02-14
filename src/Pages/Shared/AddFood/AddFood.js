@@ -46,11 +46,15 @@ const AddFood = () => {
 
 
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div
+        >
+            <div
+                style={{ backgroundImage: `url("https://img.freepik.com/free-vector/realistic-burger-chalkboard-background_79603-1042.jpg?size=626&ext=jpg&uid=R83218281&ga=GA1.2.1908891225.1665030381&semt=ais")`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}
+
+                className="hero min-h-screen bg-base-200">
                 <div className="hero-content">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className='p-6 bg-black text-white rounded-2xl'>
+                        <div className='p-6 bg-black text-white'>
                             <form onSubmit={handleForm} >
                                 <div className='gap-5'>
                                     <input type="text" name='name' placeholder="name" className="mt-2 bg-white text-black input input-ghost w-full  input-bordered" />
