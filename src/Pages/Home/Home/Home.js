@@ -12,7 +12,7 @@ const Home = () => {
             <About></About>
             <Future></Future>
             <Food></Food>
-            <div className='mt-5 flex justify-center'>
+            <div className='mt-5 flex justify-center p-4'>
                 <Link to={'/getfood'}>
                     <button className="btn w-[250px] btn-outline btn-warning rounded-lg">See All</button>
                 </Link>
