@@ -16,7 +16,7 @@ const SingleFood = () => {
             data-aos-duration="3000">
             <div className='container mx-auto'>
                 <div className="card card-compact mt-10 shadow-xl">
-                    <figure><img src={img} alt="Shoes" /></figure>
+                    <figure ><img className='h-72 w-72' src={img} alt="Shoes" /></figure>
                     <div className="card-body ">
                         <span className='text-violet-400 text-center text-bold text-4xl mt-6'>
                             <Typewriter
@@ -32,11 +32,10 @@ const SingleFood = () => {
                         <p className='text-3xl text-center'>${price}</p>
                         <p>{description}</p>
                     </div>
-                    <div className=' flex justify-center '>
+                    <div className=' flex justify-center my-4'>
                         {
                             user?.email ?
                                 <ReviewItem></ReviewItem>
-
                                 : <Link className='btn btn-outline btn-warning rounded-lg' to='/login'>Please LogIn</Link>
                         }
                     </div>
